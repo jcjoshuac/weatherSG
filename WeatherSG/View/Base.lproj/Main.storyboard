@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="WeatherSG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="8Nm-3G-Wmu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="0gd-kV-47o">
+                                <rect key="frame" x="20" y="74" width="374" height="788"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="GuT-AQ-klr">
+                                        <rect key="frame" x="14" y="0.0" width="360" height="144"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5j5-k5-LR0">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="144"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ang Mo Kio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="qCs-bE-AKF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Aze-Ak-FqZ">
+                                                        <rect key="frame" x="0.0" y="25.5" width="100" height="85.5"/>
+                                                        <color key="tintColor" name="weatherColour"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="ec0-Ql-q2U"/>
+                                                            <constraint firstAttribute="height" constant="90" id="tJU-Sc-Qsq"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="Cloud" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="csN-wd-1bg" userLabel="Temperature Label">
+                                                        <rect key="frame" x="0.0" y="114" width="100" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KXh-4u-lc5">
+                                                <rect key="frame" x="130" y="0.0" width="100" height="144"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ang Mo Kio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="eYT-JH-Uwc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CqP-WG-jk5">
+                                                        <rect key="frame" x="0.0" y="25.5" width="100" height="85.5"/>
+                                                        <color key="tintColor" name="weatherColour"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="90" id="CQw-lk-A4f"/>
+                                                            <constraint firstAttribute="width" constant="100" id="QWC-gi-Iya"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="Sun" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="TjK-fN-tdw" userLabel="Temperature Label">
+                                                        <rect key="frame" x="0.0" y="114" width="100" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="U3F-p8-rTE">
+                                                <rect key="frame" x="260" y="0.0" width="100" height="144"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ang Mo Kio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zgD-PS-glK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NGl-Br-0ff">
+                                                        <rect key="frame" x="0.0" y="25.5" width="100" height="85.5"/>
+                                                        <color key="tintColor" name="weatherColour"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="90" id="ewY-0t-pij"/>
+                                                            <constraint firstAttribute="width" constant="100" id="mzH-3E-ZuN"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="Moon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="mQE-dR-PuL" userLabel="Temperature Label">
+                                                        <rect key="frame" x="0.0" y="114" width="100" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uXr-rL-sdr">
+                                        <rect key="frame" x="14" y="194" width="360" height="144"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vV7-Rh-qjv">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="144"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ang Mo Kio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="bT3-vB-CKs">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cWE-b1-o50">
+                                                        <rect key="frame" x="0.0" y="25.5" width="100" height="85.5"/>
+                                                        <color key="tintColor" name="weatherColour"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="IQ8-hz-tMt"/>
+                                                            <constraint firstAttribute="height" constant="90" id="nX5-sf-aec"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="Star" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="I6i-iG-H3X" userLabel="Temperature Label">
+                                                        <rect key="frame" x="0.0" y="114" width="100" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7aK-PR-7r4">
+                                                <rect key="frame" x="130" y="0.0" width="100" height="144"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ang Mo Kio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Io0-1s-XNy">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DmR-U5-IKN">
+                                                        <rect key="frame" x="0.0" y="25.5" width="100" height="85.5"/>
+                                                        <color key="tintColor" name="weatherColour"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="90" id="Cxy-DY-uw0"/>
+                                                            <constraint firstAttribute="width" constant="100" id="coN-Lf-Qee"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="Cloudy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="atW-Fc-85r" userLabel="Temperature Label">
+                                                        <rect key="frame" x="0.0" y="114" width="100" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uZK-Yt-tYF">
+                                                <rect key="frame" x="260" y="0.0" width="100" height="144"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ang Mo Kio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8yg-Lv-grB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="k7k-s7-Gfi">
+                                                        <rect key="frame" x="0.0" y="25.5" width="100" height="85.5"/>
+                                                        <color key="tintColor" name="weatherColour"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="18k-aL-Ndv"/>
+                                                            <constraint firstAttribute="height" constant="90" id="59P-XD-THp"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="Cloudy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="68m-FI-VE7" userLabel="Temperature Label">
+                                                        <rect key="frame" x="0.0" y="114" width="100" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vbn-HR-E2W">
+                                        <rect key="frame" x="14" y="388" width="360" height="144"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BGJ-Hc-TIY">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="144"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tampines" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="69R-9S-OJR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6p7-Md-qtZ">
+                                                        <rect key="frame" x="0.0" y="25.5" width="100" height="85.5"/>
+                                                        <color key="tintColor" name="weatherColour"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="90" id="OHK-8o-Q7N"/>
+                                                            <constraint firstAttribute="width" constant="100" id="pmE-si-eDf"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="Cloudy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="fT5-OM-Gjd" userLabel="Temperature Label">
+                                                        <rect key="frame" x="0.0" y="114" width="100" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Tvu-tV-8Cp">
+                                                <rect key="frame" x="130" y="0.0" width="100" height="144"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Siglap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="IIb-Hu-Yke">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="X9f-0v-ga2">
+                                                        <rect key="frame" x="0.0" y="25.5" width="100" height="85.5"/>
+                                                        <color key="tintColor" name="weatherColour"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="3Ia-kt-GXM"/>
+                                                            <constraint firstAttribute="height" constant="90" id="Ipv-CB-t1u"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="Cloudy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Mbd-Sx-guY" userLabel="Temperature Label">
+                                                        <rect key="frame" x="0.0" y="114" width="100" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qzO-0u-9Uk">
+                                                <rect key="frame" x="260" y="0.0" width="100" height="144"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sungei Gedong" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="L9f-lR-DgP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0oz-Lv-yt7">
+                                                        <rect key="frame" x="0.0" y="25.5" width="100" height="85.5"/>
+                                                        <color key="tintColor" name="weatherColour"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="EXU-2J-lea"/>
+                                                            <constraint firstAttribute="height" constant="90" id="ilp-I1-cYH"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="Sun" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="n1V-Sj-e5d" userLabel="Temperature Label">
+                                                        <rect key="frame" x="0.0" y="114" width="100" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZQ-dK-jg3">
+                                        <rect key="frame" x="187" y="582" width="187" height="206"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0gd-kV-47o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Eje-Iz-pbh"/>
+                            <constraint firstItem="0gd-kV-47o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="LBh-BE-rpK"/>
+                            <constraint firstItem="0gd-kV-47o" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="YQg-8a-9Kq"/>
+                            <constraint firstItem="0gd-kV-47o" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="vYi-c8-Q3i"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fiveAreaLabel" destination="Io0-1s-XNy" id="i0F-cN-yEA"/>
+                        <outlet property="fiveForecastLabel" destination="atW-Fc-85r" id="vSn-I9-pxl"/>
+                        <outlet property="fourAreaLabel" destination="bT3-vB-CKs" id="rlw-tX-2iZ"/>
+                        <outlet property="fourForecastLabel" destination="I6i-iG-H3X" id="kEw-Vv-l2D"/>
+                        <outlet property="oneAreaLabel" destination="qCs-bE-AKF" id="i1a-SJ-t2J"/>
+                        <outlet property="oneForecastLabel" destination="csN-wd-1bg" id="qh8-t6-e93"/>
+                        <outlet property="threeAreaLabel" destination="zgD-PS-glK" id="F5N-1W-59M"/>
+                        <outlet property="threeForecastLabel" destination="mQE-dR-PuL" id="6ZA-h4-HWZ"/>
+                        <outlet property="twoAreaLabel" destination="eYT-JH-Uwc" id="hLc-vZ-1Sd"/>
+                        <outlet property="twoForecastLabel" destination="TjK-fN-tdw" id="OSK-Jz-yLZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="1440" height="810"/>
+        <image name="cloud" catalog="system" width="128" height="88"/>
+        <namedColor name="weatherColour">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
